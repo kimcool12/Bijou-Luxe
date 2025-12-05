@@ -1,0 +1,48 @@
+.tag-list{
+    width: 30rem;
+    font-family: "montserrat";
+    position: relative;
+    overflow: hidden;
+    margin-top: 6rem;
+    margin-left: 11rem;
+}
+
+.inner{
+    width: fit-content;
+    display: flex;
+    gap: 1rem;
+    animation: loop 5s linear infinite;
+}
+.tag{
+    display: flex;
+    align-items: center;
+    gap: 0 0.2rem;
+    color: var(--text-color-light);
+    font-size: 0.9rem;
+    background-color: var(--primary-dark);
+    padding: 0.4rem 0.7rem;
+    border-radius: 0.4rem;
+    box-shadow: 
+    0 0.1px 0.1px var(--primary-dark),
+    0 0.1px 0.2px  var(--primary-dark),
+    0 0.2px 1.3px var(--primary-dark);
+}
+
+.tag span{
+    font-size: 1.2rem;
+    color: var(--text-color-light);
+}
+.fade {
+    position: absolute;
+    background: linear-gradient(90deg, var(--light-bg), transparent 30%, transparent 70%, var(--light-bg));
+    inset: 0;
+    pointer-events: none;
+}
+@keyframes loop{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}

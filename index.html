@@ -7,8 +7,10 @@
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 
-    <!-- load styles -->
-    <link rel="stylesheet" href="style.css" />
+    <!-- load styles from public/css -->
+    <link rel="stylesheet" href="public/css/home.css" />
+    <link rel="stylesheet" href="public/css/Earrings.css" />
+    <link rel="stylesheet" href="public/css/output.css" />
 
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -29,16 +31,11 @@
                     </a>
                 </div>
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="Necklaces.html"
-                        class="nav-link text-gray-800 hover:text-amber-600 font-medium transition duration-300">Necklaces</a>
-                    <a href="Bracelets.html"
-                        class="nav-link text-gray-800 hover:text-amber-600 font-medium transition duration-300">Bracelets</a>
-                    <a href="Earrings.html"
-                        class="nav-link text-gray-800 hover:text-amber-600 font-medium transition duration-300">Earrings</a>
-                    <a href="#"
-                        class="nav-link text-gray-800 hover:text-amber-600 font-medium transition duration-300">Rings</a>
-                    <button id="searchBtn" class="text-xl text-gray-800 hover:text-amber-600 transition"><ion-icon
-                            name="search-outline"></ion-icon></button>
+                    <a href="Necklaces.html" class="nav-link text-gray-800 hover:text-amber-600 font-medium transition duration-300">Necklaces</a>
+                    <a href="Bracelets.html" class="nav-link text-gray-800 hover:text-amber-600 font-medium transition duration-300">Bracelets</a>
+                    <a href="Earrings.html" class="nav-link text-gray-800 hover:text-amber-600 font-medium transition duration-300">Earrings</a>
+                    <a href="#" class="nav-link text-gray-800 hover:text-amber-600 font-medium transition duration-300">Rings</a>
+                    <button id="searchBtn" class="text-xl text-gray-800 hover:text-amber-600 transition"><ion-icon name="search-outline"></ion-icon></button>
                 </div>
             </div>
         </div>
@@ -55,19 +52,15 @@
     <section class="pt-20">
         <div class="relative w-full h-screen overflow-hidden">
             <!-- keep video if you add one to public/image; poster uses existing public image -->
-            <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover"
-                poster="images/bracelet-homep.avif">
-                <source src="images/jewelleryhome.mp4" type="video/mp4">
+            <video autoplay muted loop playsinline class="absolute top-0 left-0 w-full h-full object-cover" poster="public/image/bracelet-homep.avif">
+                <source src="public/image/jewelleryhome.mp4" type="video/mp4">
                 <!-- fallback: show existing image from public -->
             </video>
 
-            <div
-                class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center text-white">
+            <div class="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-center text-white">
                 <h1 class="text-5xl font-bold drop-shadow-lg">Timeless Beauty, Crafted Just for You</h1>
-                <p class="mt-4 text-xl drop-shadow-lg">Explore our handcrafted jewelry collection designed for elegance.
-                </p>
-                <a href="Necklaces.html"
-                    class="btn inline-block mt-8 px-8 py-3 bg-amber-400 text-black font-semibold rounded-full shadow-lg hover:bg-amber-500 transition">
+                <p class="mt-4 text-xl drop-shadow-lg">Explore our handcrafted jewelry collection designed for elegance.</p>
+                <a href="Necklaces.html" class="btn inline-block mt-8 px-8 py-3 bg-amber-400 text-black font-semibold rounded-full shadow-lg hover:bg-amber-500 transition">
                     Shop Now
                 </a>
             </div>
@@ -78,15 +71,14 @@
     <section class="flex w-full">
         <!-- LEFT SIDE (uses the existing public image) -->
         <div class="w-1/2 sticky top-20 h-screen overflow-hidden bg-gray-100">
-            <img src="images/bracelet-homep.avif" alt="Featured" class="w-full h-full object-cover">
+            <img src="public/image/bracelet-homep.avif" alt="Featured" class="w-full h-full object-cover">
         </div>
 
         <!-- RIGHT SIDE -->
         <aside class="w-1/2 p-12 flex flex-col justify-center">
             <h2 class="text-4xl font-bold text-gray-800 mb-4">Our Story</h2>
             <p class="text-gray-600 leading-relaxed mb-4">
-                At Bijou Luxe, we believe jewelry is more than an accessory. Each piece tells a story of craftsmanship
-                and elegance.
+                At Bijou Luxe, we believe jewelry is more than an accessory. Each piece tells a story of craftsmanship and elegance.
             </p>
             <p class="text-gray-600 leading-relaxed">
                 Our collection features handpicked designs that celebrate beauty, quality, and timeless style.
@@ -101,22 +93,22 @@
             <div class="tag-list grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                 <!-- use the same public image as placeholder; replace with product images in public/image -->
                 <div class="border border-gray-300 rounded-lg p-4 hover:shadow-lg transition">
-                    <img src="images/bracelet-homep.avif" alt="Product 1" class="w-full h-60 object-cover rounded-lg">
+                    <img src="public/image/bracelet-homep.avif" alt="Product 1" class="w-full h-60 object-cover rounded-lg">
                     <h3 class="mt-4 text-lg font-semibold text-gray-800">Classic Necklace</h3>
                     <p class="text-amber-600 font-bold mt-2">$199</p>
                 </div>
                 <div class="border border-gray-300 rounded-lg p-4 hover:shadow-lg transition">
-                    <img src="images/bracelet-homep.avif" alt="Product 2" class="w-full h-60 object-cover rounded-lg">
+                    <img src="public/image/bracelet-homep.avif" alt="Product 2" class="w-full h-60 object-cover rounded-lg">
                     <h3 class="mt-4 text-lg font-semibold text-gray-800">Gold Bracelet</h3>
                     <p class="text-amber-600 font-bold mt-2">$249</p>
                 </div>
                 <div class="border border-gray-300 rounded-lg p-4 hover:shadow-lg transition">
-                    <img src="images/bracelet-homep.avif" alt="Product 3" class="w-full h-60 object-cover rounded-lg">
+                    <img src="public/image/bracelet-homep.avif" alt="Product 3" class="w-full h-60 object-cover rounded-lg">
                     <h3 class="mt-4 text-lg font-semibold text-gray-800">Diamond Earrings</h3>
                     <p class="text-amber-600 font-bold mt-2">$299</p>
                 </div>
                 <div class="border border-gray-300 rounded-lg p-4 hover:shadow-lg transition">
-                    <img src="images/bracelet-homep.avif" alt="Product 4" class="w-full h-60 object-cover rounded-lg">
+                    <img src="public/image/bracelet-homep.avif" alt="Product 4" class="w-full h-60 object-cover rounded-lg">
                     <h3 class="mt-4 text-lg font-semibold text-gray-800">Elegant Ring</h3>
                     <p class="text-amber-600 font-bold mt-2">$279</p>
                 </div>
@@ -132,8 +124,8 @@
         </div>
     </section>
 
-    <!-- load site script -->
-    <script src="script.js"></script>
+    <!-- load site script from public/js -->
+    <script src="public/js/home.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
 

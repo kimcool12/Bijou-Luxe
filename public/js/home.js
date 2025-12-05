@@ -33,7 +33,8 @@ async function fetchProducts() {
     const response = await fetch('/api/products');
     if (!response.ok) throw new Error('Failed to fetch products');
     const products = await response.json();
-    renderProducts(products);
+    // Only show the first 4 products as "Trending" on the homepage
+    renderProducts(products.slice(0, 4));
   } catch (error) {
     console.error('Error fetching products:', error);
     if (productContainer) productContainer.innerHTML = '<p class="text-red-500">Failed to load products.</p>';

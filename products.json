@@ -5,7 +5,7 @@
     "price": 250,
     "quantity": 10,
     "category": "Watches",
-    "image": "/image/watchvid.mp4",
+    "image": "/images/watchvid.mp4",
     "description": "Inspired by the 70's Golden Age of chronographs."
   },
   {
@@ -14,7 +14,7 @@
     "price": 120,
     "quantity": 15,
     "category": "Bracelets",
-    "image": "/image/bracelet-homep.avif",
+    "image": "/images/bracelet-homep.avif",
     "description": "A classic gold chain bracelet for everyday elegance."
   },
   {
@@ -23,7 +23,7 @@
     "price": 85,
     "quantity": 20,
     "category": "Bracelets",
-    "image": "/image/bracelet-homep.avif",
+    "image": "/images/bracelet-homep.avif",
     "description": "Minimalist silver cuff that goes with everything."
   },
   {
@@ -32,7 +32,7 @@
     "price": 150,
     "quantity": 8,
     "category": "Earrings",
-    "image": "/image/icon1.webp",
+    "image": "/images/icon1.webp",
     "description": "Elegant pearl drop earrings for special occasions."
   },
   {
@@ -41,7 +41,7 @@
     "price": 450,
     "quantity": 5,
     "category": "Earrings",
-    "image": "/image/icon3.webp",
+    "image": "/images/icon3.webp",
     "description": "Timeless diamond studs, a girl's best friend."
   },
   {
@@ -50,7 +50,7 @@
     "price": 300,
     "quantity": 3,
     "category": "Necklaces",
-    "image": "/image/icon1.webp",
+    "image": "/images/icon1.webp",
     "description": "A stunning ruby pendant on a delicate gold chain."
   },
   {
@@ -59,7 +59,7 @@
     "price": 200,
     "quantity": 12,
     "category": "Necklaces",
-    "image": "/image/icon3.webp",
+    "image": "/images/icon3.webp",
     "description": "Make a statement with this chunky gold necklace."
   },
   {
@@ -68,7 +68,7 @@
     "price": 180,
     "quantity": 10,
     "category": "Watches",
-    "image": "/image/watchvid.mp4",
+    "image": "/images/watchvid.mp4",
     "description": "Classic leather strap watch for a vintage look."
   },
   {
@@ -77,7 +77,7 @@
     "price": 280,
     "quantity": 6,
     "category": "Earrings",
-    "image": "/image/icon1.webp",
+    "image": "/images/icon1.webp",
     "description": "Deep blue sapphire drops that catch the light."
   },
   {
@@ -86,7 +86,7 @@
     "price": 140,
     "quantity": 12,
     "category": "Bracelets",
-    "image": "/image/bracelet-homep.avif",
+    "image": "/images/bracelet-homep.avif",
     "description": "A sleek rose gold bangle for a modern touch."
   },
   {
@@ -95,7 +95,7 @@
     "price": 320,
     "quantity": 4,
     "category": "Necklaces",
-    "image": "/image/icon3.webp",
+    "image": "/images/icon3.webp",
     "description": "Vibrant emerald pendant for a pop of color."
   },
   {
@@ -104,7 +104,7 @@
     "price": 300,
     "quantity": 8,
     "category": "Watches",
-    "image": "/image/watchvid.mp4",
+    "image": "/images/watchvid.mp4",
     "description": "Rugged sport watch with chronograph features."
   },
   {
@@ -113,7 +113,7 @@
     "price": 95,
     "quantity": 25,
     "category": "Earrings",
-    "image": "/image/icon1.webp",
+    "image": "/images/icon1.webp",
     "description": "Classic gold hoops, a wardrobe staple."
   },
   {
@@ -122,7 +122,7 @@
     "price": 110,
     "quantity": 18,
     "category": "Bracelets",
-    "image": "/image/bracelet-homep.avif",
+    "image": "/images/bracelet-homep.avif",
     "description": "Personalize your style with this charm bracelet."
   },
   {
@@ -131,7 +131,7 @@
     "price": 75,
     "quantity": 30,
     "category": "Necklaces",
-    "image": "/image/icon3.webp",
+    "image": "/images/icon3.webp",
     "description": "Simple silver chain, perfect for layering."
   },
   {
@@ -140,7 +140,7 @@
     "price": 150,
     "quantity": 15,
     "category": "Watches",
-    "image": "/image/watchvid.mp4",
+    "image": "/images/watchvid.mp4",
     "description": "Sleek digital display with smart features."
   }
 ]

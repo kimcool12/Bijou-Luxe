@@ -12,7 +12,7 @@ const PORT = 8080;
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(express.static('public'));
+app.use(express.static('.'));
 app.use('/uploads', express.static('uploads'));
 
 // Multer Setup for File Uploads
@@ -50,7 +50,7 @@ const writeJSON = (file, data) => {
 
 // Serve HTML Pages
 app.get('/', (req, res) => {
-    const filePath = path.join(__dirname, 'views', 'index.html');
+    const filePath = path.join(__dirname, 'index.html');
     console.log('Request for /');
     console.log('Serving file:', filePath);
     if (fs.existsSync(filePath)) {
@@ -60,12 +60,12 @@ app.get('/', (req, res) => {
         res.status(404).send('File not found on server');
     }
 });
-app.get('/index.html', (req, res) => res.sendFile(path.join(__dirname, 'views', 'index.html')));
-app.get('/product.html', (req, res) => res.sendFile(path.join(__dirname, 'views', 'product.html')));
-app.get('/login.html', (req, res) => res.sendFile(path.join(__dirname, 'views', 'login.html')));
-app.get('/register.html', (req, res) => res.sendFile(path.join(__dirname, 'views', 'register.html')));
-app.get('/dashboard.html', (req, res) => res.sendFile(path.join(__dirname, 'views', 'dashboard.html')));
-app.get('/admin.html', (req, res) => res.sendFile(path.join(__dirname, 'views', 'admin.html')));
+app.get('/index.html', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
+app.get('/product.html', (req, res) => res.sendFile(path.join(__dirname, 'product.html')));
+app.get('/login.html', (req, res) => res.sendFile(path.join(__dirname, 'login.html')));
+app.get('/register.html', (req, res) => res.sendFile(path.join(__dirname, 'register.html')));
+app.get('/dashboard.html', (req, res) => res.sendFile(path.join(__dirname, 'dashboard.html')));
+app.get('/admin.html', (req, res) => res.sendFile(path.join(__dirname, 'admin.html')));
 app.get('/Bracelets.html', (req, res) => res.sendFile(path.join(__dirname, 'Bracelets.html')));
 app.get('/Earrings.html', (req, res) => res.sendFile(path.join(__dirname, 'Earrings.html')));
 app.get('/Necklaces.html', (req, res) => res.sendFile(path.join(__dirname, 'Necklaces.html')));

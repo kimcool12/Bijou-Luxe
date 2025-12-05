@@ -5,16 +5,70 @@
     "price": 250,
     "quantity": 10,
     "category": "Watches",
-    "image": "image/watchvid.mp4",
+    "image": "/image/watchvid.mp4",
     "description": "Inspired by the 70's Golden Age of chronographs."
   },
   {
-    "name": "Test Watch",
-    "price": 999,
+    "id": 2,
+    "name": "Gold Chain Bracelet",
+    "price": 120,
+    "quantity": 15,
+    "category": "Bracelets",
+    "image": "/image/bracelet-homep.avif",
+    "description": "A classic gold chain bracelet for everyday elegance."
+  },
+  {
+    "id": 3,
+    "name": "Silver Cuff",
+    "price": 85,
+    "quantity": 20,
+    "category": "Bracelets",
+    "image": "/image/bracelet-homep.avif",
+    "description": "Minimalist silver cuff that goes with everything."
+  },
+  {
+    "id": 4,
+    "name": "Pearl Drop Earrings",
+    "price": 150,
+    "quantity": 8,
+    "category": "Earrings",
+    "image": "/image/icon1.webp",
+    "description": "Elegant pearl drop earrings for special occasions."
+  },
+  {
+    "id": 5,
+    "name": "Diamond Studs",
+    "price": 450,
     "quantity": 5,
+    "category": "Earrings",
+    "image": "/image/icon3.webp",
+    "description": "Timeless diamond studs, a girl's best friend."
+  },
+  {
+    "id": 6,
+    "name": "Ruby Pendant",
+    "price": 300,
+    "quantity": 3,
+    "category": "Necklaces",
+    "image": "/image/icon1.webp",
+    "description": "A stunning ruby pendant on a delicate gold chain."
+  },
+  {
+    "id": 7,
+    "name": "Chunky Gold Necklace",
+    "price": 200,
+    "quantity": 12,
+    "category": "Necklaces",
+    "image": "/image/icon3.webp",
+    "description": "Make a statement with this chunky gold necklace."
+  },
+  {
+    "id": 8,
+    "name": "Leather Strap Watch",
+    "price": 180,
+    "quantity": 10,
     "category": "Watches",
-    "image": "image/watchvid.mp4",
-    "description": "Test Description",
-    "id": 1764913176601
+    "image": "/image/watchvid.mp4",
+    "description": "Classic leather strap watch for a vintage look."
   }
 ]

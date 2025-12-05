@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earrings - Bijou Luxe</title>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/input.css">
+    <link href="/css/output.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- NAVIGATION BAR -->
+    <nav class="bg-white shadow-md fixed top-0 w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html"
+                        class="text-black font-black text-3xl flex items-center gap-2 hover:text-amber-600 transition duration-300">
+                        <ion-icon name="logo-slack" class="text-4xl"></ion-icon>
+                        <span style="font-family: 'Pirata One', cursive; letter-spacing: 1px;">Bijou Luxe</span>
+                    </a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="Necklaces.html"
+                        class="nav-link text-gray-800 hover:text-amber-600 font-medium tracking-wide transition duration-300 relative group">Necklaces</a>
+                    <a href="Bracelets.html"
+                        class="nav-link text-gray-800 hover:text-amber-600 font-medium tracking-wide transition duration-300 relative group">Bracelets</a>
+                    <a href="Earrings.html"
+                        class="nav-link text-gray-800 hover:text-amber-600 font-medium tracking-wide transition duration-300 relative group">Earrings</a>
+                    <a href="login.html"
+                        class="nav-link text-gray-800 hover:text-amber-600 font-medium tracking-wide transition duration-300 relative group">Login</a>
+                    <a href="dashboard.html"
+                        class="nav-link text-gray-800 hover:text-amber-600 font-medium tracking-wide transition duration-300 relative group">Dashboard</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <div class="pt-32 pb-10 text-center">
+        <h1 class="text-5xl font-serif font-bold text-gray-800">Earrings</h1>
+        <p class="text-gray-500 mt-2">Sparkle with every turn.</p>
+    </div>
+
+    <!-- PRODUCT GRID -->
+    <div class="max-w-7xl mx-auto px-4 pb-20">
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <p class="text-gray-500 col-span-4 text-center">Loading products...</p>
+        </div>
+    </div>
+
+    <script>
+        async function loadProducts() {
+            try {
+                const response = await fetch('/api/products?category=Earrings');
+                const products = await response.json();
+                const grid = document.getElementById('product-grid');
+                grid.innerHTML = '';
+
+                if (products.length === 0) {
+                    grid.innerHTML = '<p class="text-gray-500 col-span-4 text-center">No products found in this category.</p>';
+                    return;
+                }
+
+                products.forEach(product => {
+                    const card = document.createElement('div');
+                    card.className = 'bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 cursor-pointer';
+                    card.onclick = () => window.location.href = `product.html?id=${product.id}`;
+                    card.innerHTML = `
+                        <div class="h-64 overflow-hidden">
+                            <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-4 text-center">
+                            <h3 class="text-lg font-bold text-gray-800">${product.name}</h3>
+                            <p class="text-amber-600 font-semibold mt-1">$${product.price.toFixed(2)}</p>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+        loadProducts();
+    </script>
+</body>
+
+</html>

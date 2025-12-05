@@ -66,9 +66,9 @@ app.get('/login.html', (req, res) => res.sendFile(path.join(__dirname, 'views', 
 app.get('/register.html', (req, res) => res.sendFile(path.join(__dirname, 'views', 'register.html')));
 app.get('/dashboard.html', (req, res) => res.sendFile(path.join(__dirname, 'views', 'dashboard.html')));
 app.get('/admin.html', (req, res) => res.sendFile(path.join(__dirname, 'views', 'admin.html')));
-app.get('/Bracelets.html', (req, res) => res.sendFile(path.join(__dirname, 'views', 'Bracelets.html')));
-app.get('/Earrings.html', (req, res) => res.sendFile(path.join(__dirname, 'views', 'Earrings.html')));
-app.get('/Necklaces.html', (req, res) => res.sendFile(path.join(__dirname, 'views', 'Necklaces.html')));
+app.get('/Bracelets.html', (req, res) => res.sendFile(path.join(__dirname, 'Bracelets.html')));
+app.get('/Earrings.html', (req, res) => res.sendFile(path.join(__dirname, 'Earrings.html')));
+app.get('/Necklaces.html', (req, res) => res.sendFile(path.join(__dirname, 'Necklaces.html')));
 
 // API: Register
 app.post('/register', (req, res) => {

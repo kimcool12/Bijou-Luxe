@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "name": "The Mulholland",
+    "price": 250,
+    "quantity": 10,
+    "category": "Watches",
+    "image": "image/watchvid.mp4",
+    "description": "Inspired by the 70's Golden Age of chronographs."
+  },
+  {
+    "name": "Test Watch",
+    "price": 999,
+    "quantity": 5,
+    "category": "Watches",
+    "image": "image/watchvid.mp4",
+    "description": "Test Description",
+    "id": 1764913176601
+  }
+]

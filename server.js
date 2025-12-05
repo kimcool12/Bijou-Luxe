@@ -26,6 +26,56 @@ const mimeTypes = {
 http.createServer(function (request, response) {
     console.log('request ', request.url);
 
+    // API: GET /api/products
+    if (request.url === '/api/products' && request.method === 'GET') {
+        fs.readFile('./products.json', 'utf8', (err, data) => {
+            if (err) {
+                response.writeHead(500, { 'Content-Type': 'application/json' });
+                response.end(JSON.stringify({ error: 'Could not read products' }));
+            } else {
+                response.writeHead(200, { 'Content-Type': 'application/json' });
+                response.end(data);
+            }
+        });
+        return;
+    }
+
+    // API: POST /api/products
+    if (request.url === '/api/products' && request.method === 'POST') {
+        let body = '';
+        request.on('data', chunk => {
+            body += chunk.toString();
+        });
+        request.on('end', () => {
+            try {
+                const newProduct = JSON.parse(body);
+                fs.readFile('./products.json', 'utf8', (err, data) => {
+                    let products = [];
+                    if (!err && data) {
+                        products = JSON.parse(data);
+                    }
+                    // Simple ID generation
+                    newProduct.id = Date.now();
+                    products.push(newProduct);
+
+                    fs.writeFile('./products.json', JSON.stringify(products, null, 2), (err) => {
+                        if (err) {
+                            response.writeHead(500, { 'Content-Type': 'application/json' });
+                            response.end(JSON.stringify({ error: 'Could not save product' }));
+                        } else {
+                            response.writeHead(201, { 'Content-Type': 'application/json' });
+                            response.end(JSON.stringify(newProduct));
+                        }
+                    });
+                });
+            } catch (e) {
+                response.writeHead(400, { 'Content-Type': 'application/json' });
+                response.end(JSON.stringify({ error: 'Invalid JSON' }));
+            }
+        });
+        return;
+    }
+
     let filePath = '.' + decodeURI(request.url);
     if (filePath == './') {
         filePath = './index.html';

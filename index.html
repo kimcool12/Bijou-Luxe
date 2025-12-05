@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel"stylesheet" href="home.css">
-    <link rel"stylesheet" href="input.css">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="input.css">
     <link href="./output.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -87,6 +87,14 @@
                             <ion-icon name="search-outline"></ion-icon>
                         </button>
                     </div>
+
+                    <!-- Cart Button -->
+                    <button id="cart-btn"
+                        class="relative text-2xl text-gray-800 hover:text-amber-600 transition duration-300 p-1">
+                        <ion-icon name="cart-outline"></ion-icon>
+                        <span id="cart-count"
+                            class="absolute -top-1 -right-1 bg-amber-600 text-white text-xs font-bold rounded-full h-5 w-5 flex items-center justify-center hidden">0</span>
+                    </button>
 
                     <!-- Mobile Menu Button -->
                     <div class="md:hidden flex items-center">
@@ -198,316 +206,245 @@
         <section class="text-center">
             <div>
                 <h2 class="text-4xl font-semibold leading-14 tracking-wide mt-14 ">THE ICONS</h2>
-                <p
-                    style="font-family: Alumni Sans Pinstripe, sans-serif; margin-top: 7px; word-spacing:5px; color:#333333; font-size: 20px;  font-weight: bold; ">
-                    Distinct by design, made to wear your way, always evolving.</p>
+                <p class="text-gray-500">Our most coveted pieces. Timeless, versatile, and unmistakeably Bijou Luxe.</p>
             </div>
+
+            <section class="flex justify-between my-14 container mx-auto">
+                <!--1st one-->
+                <div class="bg-gray-100 rounded-sm p-1 ml-2">
+                    <div class="container">
+                        <!-- Image + hover title -->
+                        <div class="image-box">
+                            <img src="/image/icon1.webp" loading="lazy" alt="earrings">
+                            <div class="overlay">
+                                <h3>CHARLOTTE</h3>
+                            </div>
+                        </div>
+
+                        <!-- Content below (always visible) -->
+                        <div class="details">
+                            <h2>CHARLOTTE</h2>
+                            <p>Clean, classic, and a little unexpected. Charlotte pairs soft curves with fluted texture
+                                for
+                                a
+                                silhouette that’s playful yet polished.</p>
+                            <button><a href="#">Shop The Charlotte Collection</a></button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+
+                <!--3rd one-->
+                <div class="bg-gray-100  rounded-sm p-1 mr-2">
+                    <div class="container">
+                        <!-- Image + hover title -->
+                        <div class="image-box">
+                            <img src="/image/icon3.webp" loading="lazy" alt="earrings">
+                            <div class="overlay">
+                                <h3>DÔME</h3>
+                            </div>
+                        </div>
+
+                        <!-- Content below (always visible) -->
+                        <div class="details">
+                            <h2>DÔME</h2>
+                            <p>Artful and wearable, subtle and bold. Dôme is crafted to bring balance to every look.</p>
+                            <button><a href="#">Shop The Dôme Collection</a></button>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </section>
 
         </section>
 
-        <section class="flex justify-between my-14">
 
+        <!--TRENDING PRODUCTS-->
+        <section class="mb-25">
+            <section class="border-t-1  border-gray-300 ">
+                <h4 class=" text-4xl m-8  font-serif text-center">TRENDING PRODUCTS</h4>
+            </section>
 
-            <!--1st one-->
-            <div class="bg-gray-100  rounded-sm p-1 ml-2">
-                <div class="container">
-                    <!-- Image + hover title -->
-                    <div class="image-box">
-                        <img src="/image/icon1.webp" loading="lazy" alt="earrings">
-                        <div class="overlay">
-                            <h3>STEVIE</h3>
-                        </div>
+            <section class="text-center" id="product-container">
+                <!-- Products will be loaded here dynamically -->
+                <p class="text-gray-500">Loading products...</p>
+            </section>
+
+            <a href="Necklaces.html" class="link">Shop All</a>
+        </section>
+
+        <!-- SHOPPING CART UI (Hidden by default) -->
+        <div id="cart-modal" class="fixed inset-0 bg-black/50 hidden z-50 flex justify-end">
+            <div class="bg-white w-full max-w-md h-full shadow-xl flex flex-col">
+                <div class="p-4 border-b flex justify-between items-center bg-amber-50">
+                    <h2 class="text-xl font-serif font-bold">Your Shopping Cart</h2>
+                    <button id="close-cart" class="text-2xl hover:text-amber-600">&times;</button>
+                </div>
+                <div id="cart-items" class="flex-1 overflow-y-auto p-4 space-y-4">
+                    <!-- Cart items will be injected here -->
+                    <p class="text-center text-gray-500 mt-10">Your cart is empty.</p>
+                </div>
+                <div class="p-4 border-t bg-gray-50">
+                    <div class="flex justify-between text-lg font-bold mb-4">
+                        <span>Total:</span>
+                        <span id="cart-total">$0.00</span>
                     </div>
-
-                    <!-- Content below (always visible) -->
-                    <div class="details">
-                        <h2>STEVIE</h2>
-                        <p>Designed for everyday transformation. Stevie stands out in your rotation and goes well with
-                            any
-                            mood.</p>
-                        <button><a href="#">Shop The Stevie Collection</a></button>
-                    </div>
+                    <button id="checkout-btn"
+                        class="w-full bg-amber-600 text-white py-3 rounded-md font-bold hover:bg-amber-700 transition duration-300">
+                        Checkout via Email
+                    </button>
                 </div>
             </div>
-            </div>
+        </div>
 
-            <!--2ns one-->
-            <div class="bg-gray-100  rounded-sm p-1">
-                <div class="container">
-                    <!-- Image + hover title -->
-                    <div class="image-box">
-                        <img src="/image/icon2.webp" loading="lazy" alt="earrings">
-                        <div class="overlay">
-                            <h3>CHARLOTTE</h3>
-                        </div>
-                    </div>
 
-                    <!-- Content below (always visible) -->
-                    <div class="details">
-                        <h2>CHARLOTTE</h2>
-                        <p>Clean, classic, and a little unexpected. Charlotte pairs soft curves with fluted texture for
-                            a
-                            silhouette that’s playful yet polished.</p>
-                        <button><a href="#">Shop The Charlotte Collection</a></button>
-                    </div>
-                </div>
-            </div>
-            </div>
+        <section class="ambsec">
+            <h5 class="ambaintro">Meet our Ambassador, Adrian Cole </h5>
+            <div class="aboutamba">
+                <p class="ambaprofil">Born with a love for speed and design, Adrian Cole began his journey from local
+                    street
+                    karting to the global
+                    Formula E stage. His bold energy and sharp presence caught the attention of Bijou Luxe, leading to a
+                    partnership built on shared values of class, innovation, and individuality.
 
-            <!--3rd one-->
-            <div class="bg-gray-100  rounded-sm p-1 mr-2">
-                <div class="container">
-                    <!-- Image + hover title -->
-                    <div class="image-box">
-                        <img src="/image/icon3.webp" loading="lazy" alt="earrings">
-                        <div class="overlay">
-                            <h3>DÔME</h3>
-                        </div>
-                    </div>
-
-                    <!-- Content below (always visible) -->
-                    <div class="details">
-                        <h2>DÔME</h2>
-                        <p>Artful and wearable, subtle and bold. Dôme is crafted to bring balance to every look.</p>
-                        <button><a href="#">Shop The Dôme Collection</a></button>
-                    </div>
-                </div>
-            </div>
+                    Today, Adrian stands not just as a champion racer but as a symbol of refined ambition — wearing
+                    Bijou
+                    Luxe
+                    both on and off the track. His story mirrors what Bijou Luxe represents: uncompromising taste and
+                    forward
+                    motion.</p>
+                <img src="image/amba.webp" loading="lazy" class="amba">
             </div>
         </section>
 
-    </section>
+        <!--about us-->
+        <section class="about">
+
+            <h2>About Us</h2>
+
+            <p> Bijou Luxe is a modern fashion and accessories store known for its elegant and timeless collections. The
+                brand focuses on offering high-quality jewelry, watches, and fashion pieces that combine luxury with
+                everyday style. Bijou Luxe caters to individuals who appreciate sophistication, fine craftsmanship, and
+                a touch of glamour in their personal style.</p>
+        </section>
 
 
-    <!--TRENDING PRODUCTS-->
-    <section class="mb-25">
-        <section class="border-t-1  border-gray-300 ">
-            <h4 class=" text-4xl m-8  font-serif">TRENDING PRODUCTS</h4>
-            <section>
-                <!--2-->
-                <div class="inline-block border border-gray-300 rounded-lg p-4 text-left ml-9">
-                    <div class="relative w-60 h-70 overflow-hidden rounded-b-none">
-                        <!-- Default image -->
-                        <a href="#"><img src="/image/trending1.webp" loading="lazy" alt="Earrings"
-                                class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-0"></a>
+        <!--Insurance-->
+        <section class="promise">
 
-                        <!-- Hover image -->
-                        <a href="#"><img src="/image/trending1h.webp" loading="lazy" alt="Earrings Hover"
-                                class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hover:opacity-100"></a>
-                    </div>
-                    <p>
-                    <h5><a href="#" class="text-gray-400">DÔME FIGURE SLIM RINGS</a></h5>
-                    <P>$497</P>
-                    <P class="">13K Yellow Gold</p>
-                    </p>
-                </div>
-                </div>
-                <!--2-->
-                <div class="inline-block border border-gray-300 rounded-lg p-4 text-left ml-9">
-                    <div class="relative w-60 h-70 overflow-hidden rounded-b-none">
-                        <!-- Default image -->
-                        <a href="#"><img src="/image/Boldsmall.webp" loading="lazy" alt="Earrings"
-                                class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-0"></a>
+            <h1>Our Promises</h1>
 
-                        <!-- Hover image -->
-                        <a href="#"><img src="/image/BoldSmall-h.webp" loading="lazy" alt="Earrings Hover"
-                                class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hover:opacity-100"></a>
-                    </div>
-                    <p>
-                    <h5><a href="#" class="text-gray-400">Bold Small Hoops</a></h5>
-                    <P>$398</P>
-                    <P class="">14k Yellow Gold</p>
-                    </p>
-                </div>
-                </div>
-                <!--2-->
 
-                <div class="inline-block border border-gray-300 rounded-lg p-4 text-left ml-9">
-                    <div class="relative w-60 h-70 overflow-hidden rounded-b-none">
-                        <!-- Default image -->
-                        <a href="#"><img src="/image/boyfriend.webp" loading="lazy" alt="Earrings"
-                                class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-0"></a>
+            <section class="insurance">
 
-                        <!-- Hover image -->
-                        <a href="#"><img src="/image/boyfriend-h.webp" loading="lazy" alt="Earrings Hover"
-                                class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hover:opacity-100"></a>
-                    </div>
-                    <p>
-                    <h5><a href="#" class="text-gray-400">Boyfriend Bold Bracelet</a></h5>
-                    <P>$248</P>
-                    <P class="">14K Yellow Gold</p>
-                    </p>
-                </div>
+                <div>
+                    <img src="image/delivery.webp">
+                    <p>Free Shipping Over $75</p>
                 </div>
 
-                <!--2-->
-                <div class="inline-block border border-gray-300 rounded-lg p-4 text-left ml-9">
-                    <div class="relative w-60 h-70 overflow-hidden rounded-b-none">
-                        <!-- Default image -->
-                        <a href="#"><img src="/image/speedmaster.webp" loading="lazy" alt="Earrings"
-                                class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-0"></a>
+                <div>
+                    <img src="image/warranty.webp">
+                    <p> Two Year Warranty</p>
+                </div>
 
-                        <!-- Hover image -->
-                        <a href="#"><img src="/image/speedmaster-h.webp" loading="lazy" alt="Earrings Hover"
-                                class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hover:opacity-100"></a>
-                    </div>
-                    <p>
-                    <h5><a href="#" class="text-gray-400 space-x-0">Speedmaster Moonwatch</a></h5>
-                    <P>$9,500</P>
-                    <P class="">42 mm, steel on steel</p>
-                    </p>
+                <div>
+                    <img src="image/refund.webp">
+                    <p>Easy Returns</p>
                 </div>
-                </div>
-                <a href="#" class="link">See More →</a>
             </section>
         </section>
-    </section>
-
-
-    <section class="ambsec">
-        <h5 class="ambaintro">Meet our Ambassador, Adrian Cole </h5>
-        <div class="aboutamba">
-            <p class="ambaprofil">Born with a love for speed and design, Adrian Cole began his journey from local street
-                karting to the global
-                Formula E stage. His bold energy and sharp presence caught the attention of Bijou Luxe, leading to a
-                partnership built on shared values of class, innovation, and individuality.
-
-                Today, Adrian stands not just as a champion racer but as a symbol of refined ambition — wearing Bijou
-                Luxe
-                both on and off the track. His story mirrors what Bijou Luxe represents: uncompromising taste and
-                forward
-                motion.</p>
-            <img src="image/amba.webp" loading="lazy" class="amba">
-        </div>
-    </section>
-
-    <!--about us-->
-    <section class="about">
-
-        <h2>About Us</h2>
-
-        <p> Bijou Luxe is a modern fashion and accessories store known for its elegant and timeless collections. The
-            brand focuses on offering high-quality jewelry, watches, and fashion pieces that combine luxury with
-            everyday style. Bijou Luxe caters to individuals who appreciate sophistication, fine craftsmanship, and
-            a touch of glamour in their personal style.</p>
-    </section>
-
-
-    <!--Insurance-->
-    <section class="promise">
-
-        <h1>Our Promises</h1>
-
-        <section class="insurance">
-
-            <div>
-                <img src="image/delivery.webp">
-                <p>Free Shipping Over $75</p>
-            </div>
-
-            <div>
-                <img src="image/warranty.webp">
-                <p> Two Year Warranty</p>
-            </div>
-
-            <div>
-                <img src="image/refund.webp">
-                <p>Easy Returns</p>
-            </div>
-        </section>
-    </section>
 
 
 
-    <!--footer-->
-    <footer>
-        <div class="footunderline">
-            <div class="footer">
+        <!--footer-->
+        <footer>
+            <div class="footunderline">
+                <div class="footer">
 
-                <div class="footer-intro">
-                    <h3>Bijou Luxe</h3>
-                    <p>Timeless Beauty, Crafted Just for You.</p>
-                    <div class="Contact-icons">
-                        <a href="#"><ion-icon name="logo-linkedin" class="linkedin"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-twitter" class="x"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-facebook" class="facebook"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-instagram" class="ig"></ion-icon></a>
+                    <div class="footer-intro">
+                        <h3>Bijou Luxe</h3>
+                        <p>Timeless Beauty, Crafted Just for You.</p>
+                        <div class="Contact-icons">
+                            <a href="#"><ion-icon name="logo-linkedin" class="linkedin"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-twitter" class="x"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-facebook" class="facebook"></ion-icon></a>
+                            <a href="#"><ion-icon name="logo-instagram" class="ig"></ion-icon></a>
 
+                        </div>
                     </div>
+
+
+                    <div class="footer-shops">
+                        <h4>Shops</h4>
+                        <div class="the-shops">
+                            <a href="#">Shop Watchs</a>
+                            <a href="#">Shop Ear Wears</a>
+                            <a href="#">Shop Bracelets</a>
+                            <a href="#">Shop Jewelrys</a>
+
+                        </div>
+                    </div>
+
+
+                    <div class="footer-shops">
+                        <h4>Customers service</h4>
+                        <div class="the-shops">
+                            <a href="#">FAQs</a>
+                            <a href="#">Shipping & Returns </a>
+                            <a href="#">Store Locator</a>
+                            <a href="#">Contact Us</a>
+                            <a href="#">Piecing service</a>
+                            <a href="#">Styling Appointment</a>
+
+                        </div>
+                    </div>
+
+
+
+                    <div class="footer-shops">
+                        <h4>Join the Luxe</h4>
+                        <div class="the-shops">
+                            <a href="#">Our Story</a>
+                            <a href="#">Our Blogs</a>
+                            <a href="#">Ambassadors</a>
+                            <a href="#">Code Of Conduct</a>
+
+                        </div>
+                    </div>
+
+
                 </div>
 
+                <div class="trade-mark">
+                    <p>© 2025 Bijou Luxe</p>
 
-                <div class="footer-shops">
-                    <h4>Shops</h4>
-                    <div class="the-shops">
-                        <a href="#">Shop Watchs</a>
-                        <a href="#">Shop Ear Wears</a>
-                        <a href="#">Shop Bracelets</a>
-                        <a href="#">Shop Jewelrys</a>
 
-                    </div>
                 </div>
+        </footer>
 
 
-                <div class="footer-shops">
-                    <h4>Customers service</h4>
-                    <div class="the-shops">
-                        <a href="#">FAQs</a>
-                        <a href="#">Shipping & Returns </a>
-                        <a href="#">Store Locator</a>
-                        <a href="#">Contact Us</a>
-                        <a href="#">Piecing service</a>
-                        <a href="#">Styling Appointment</a>
+        <script src="home.js"></script>
 
-                    </div>
-                </div>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+        <script>
+            gsap.registerPlugin(ScrollTrigger);
 
-
-
-                <div class="footer-shops">
-                    <h4>Join the Luxe</h4>
-                    <div class="the-shops">
-                        <a href="#">Our Story</a>
-                        <a href="#">Our Blogs</a>
-                        <a href="#">Ambassadors</a>
-                        <a href="#">Code Of Conduct</a>
-
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="trade-mark">
-                <p>© 2025 Bijou Luxe</p>
-
-
-            </div>
-    </footer>
-
-
-    <script src="home.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
-    <script>
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.utils.toArray("section").forEach((sec) => {
-            gsap.from(sec, {
-                opacity: 0,
-                y: 80,
-                duration: 1.2,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: sec,
-                    start: "top 85%",
-                    toggleActions: "play none none reverse"
-                }
+            gsap.utils.toArray("section").forEach((sec) => {
+                gsap.from(sec, {
+                    opacity: 0,
+                    y: 80,
+                    duration: 1.2,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: sec,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse"
+                    }
+                });
             });
-        });
 
-    </script>
+        </script>
 
 </body>
 

@@ -4,41 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earrings - Bijou Luxe</title>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="input.css">
-    <link rel="stylesheet" href="Earrings.css">
-    <link href="./output.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe:ital@0;1&family=Oswald:wght@200..700&display=swap"
-        rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Pirata+One&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <title>Bijou Luxe</title>
 </head>
 
-<body>
+<body class="bg-gray-50">
 
-    <!--NAVIGATION BAR-->
+    <!-- NAVIGATION BAR -->
     <nav class="bg-white shadow-md fixed top-0 w-full z-50 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
                     <a href="index.html"
                         class="text-black font-black text-3xl flex items-center gap-2 hover:text-amber-600 transition duration-300">
@@ -46,465 +24,69 @@
                         <span style="font-family: 'Pirata One', cursive; letter-spacing: 1px;">Bijou Luxe</span>
                     </a>
                 </div>
-
-                <!-- Desktop Menu -->
                 <div class="hidden md:flex space-x-8 items-center">
                     <a href="Necklaces.html"
-                        class="nav-link text-gray-800 hover:text-amber-600 font-medium tracking-wide transition duration-300 relative group">
-                        Necklaces
-                        <span
-                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-600 transition-all duration-300 group-hover:w-full"></span>
-                    </a>
+                        class="nav-link text-gray-800 hover:text-amber-600 font-medium tracking-wide transition duration-300 relative group">Necklaces</a>
                     <a href="Bracelets.html"
-                        class="nav-link text-gray-800 hover:text-amber-600 font-medium tracking-wide transition duration-300 relative group">
-                        Bracelets
-                        <span
-                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-600 transition-all duration-300 group-hover:w-full"></span>
-                    </a>
+                        class="nav-link text-gray-800 hover:text-amber-600 font-medium tracking-wide transition duration-300 relative group">Bracelets</a>
                     <a href="Earrings.html"
-                        class="nav-link text-gray-800 hover:text-amber-600 font-medium tracking-wide transition duration-300 relative group">
-                        Earrings
-                        <span
-                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-600 transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                    <a href="#"
-                        class="nav-link text-gray-800 hover:text-amber-600 font-medium tracking-wide transition duration-300 relative group">
-                        Rings
-                        <span
-                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-600 transition-all duration-300 group-hover:w-full"></span>
-                    </a>
-                    <a href="#"
-                        class="nav-link text-gray-800 hover:text-amber-600 font-medium tracking-wide transition duration-300 relative group">
-                        Watches
-                        <span
-                            class="absolute bottom-0 left-0 w-0 h-0.5 bg-amber-600 transition-all duration-300 group-hover:w-full"></span>
-                    </a>
+                        class="nav-link text-gray-800 hover:text-amber-600 font-medium tracking-wide transition duration-300 relative group">Earrings</a>
+                    <a href="login.html"
+                        class="nav-link text-gray-800 hover:text-amber-600 font-medium tracking-wide transition duration-300 relative group">Login</a>
+                    <a href="dashboard.html"
+                        class="nav-link text-gray-800 hover:text-amber-600 font-medium tracking-wide transition duration-300 relative group">Dashboard</a>
                 </div>
-
-                <!-- Icons & Mobile Menu Button -->
-                <div class="flex items-center space-x-4">
-                    <!-- Search -->
-                    <div class="relative flex items-center">
-                        <input type="text" placeholder="Search..." id="searchInput"
-                            class="w-0 opacity-0 transition-all duration-300 ease-in-out bg-gray-100 text-black border border-gray-300 px-3 py-1 rounded-full focus:outline-none focus:ring-1 focus:ring-amber-500 text-sm">
-                        <button id="searchBtn"
-                            class="text-2xl text-gray-800 hover:text-amber-600 transition duration-300 p-1">
-                            <ion-icon name="search-outline"></ion-icon>
-                        </button>
-                    </div>
-
-                    <!-- Mobile Menu Button -->
-                    <div class="md:hidden flex items-center">
-                        <button id="mobile-menu-btn"
-                            class="text-3xl text-gray-800 hover:text-amber-600 focus:outline-none p-1">
-                            <ion-icon name="menu-outline"></ion-icon>
-                        </button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Mobile Menu (Hidden by default) -->
-        <div id="mobile-menu"
-            class="hidden md:hidden bg-white border-t border-gray-100 absolute w-full left-0 shadow-lg">
-            <div class="px-4 pt-2 pb-6 space-y-2 flex flex-col items-center">
-                <a href="Necklaces.html"
-                    class="block px-3 py-2 text-lg font-medium text-gray-800 hover:text-amber-600 hover:bg-gray-50 rounded-md w-full text-center transition duration-300">Necklaces</a>
-                <a href="Bracelets.html"
-                    class="block px-3 py-2 text-lg font-medium text-gray-800 hover:text-amber-600 hover:bg-gray-50 rounded-md w-full text-center transition duration-300">Bracelets</a>
-                <a href="Earrings.html"
-                    class="block px-3 py-2 text-lg font-medium text-gray-800 hover:text-amber-600 hover:bg-gray-50 rounded-md w-full text-center transition duration-300">Earrings</a>
-                <a href="#"
-                    class="block px-3 py-2 text-lg font-medium text-gray-800 hover:text-amber-600 hover:bg-gray-50 rounded-md w-full text-center transition duration-300">Rings</a>
-                <a href="#"
-                    class="block px-3 py-2 text-lg font-medium text-gray-800 hover:text-amber-600 hover:bg-gray-50 rounded-md w-full text-center transition duration-300">Watches</a>
-                <a href="#"
-                    class="block px-3 py-2 text-lg font-medium text-gray-800 hover:text-amber-600 hover:bg-gray-50 rounded-md w-full text-center transition duration-300">Where
-                    to Buy</a>
             </div>
         </div>
     </nav>
 
+    <!-- HEADER -->
+    <div class="pt-32 pb-10 text-center">
+        <h1 class="text-5xl font-serif font-bold text-gray-800">Earrings</h1>
+        <p class="text-gray-500 mt-2">Sparkle with every turn.</p>
+    </div>
 
-    <section class=" flex flex-col gap-6 mt-24 mb-12">
-        <p class="ml-24"><a href="#">Shop all</a></p>
-        <h2 class=" e text-black font-black text-3xl ml-24">Earrings</h2>
-
-        <div class="flex flex-wrap gap-6 justify-center">
-            <!-- Card 1 -->
-            <div class="relative w-1/5">
-                <a href="#">
-                    <img src="image/ShopAll_Nav_Earrings.webp" alt="Earrings"
-                        class="w-full h-56 object-cover rounded-lg">
-                    <p class="absolute bottom-2 left-2 text-white font-semibold text-sm bg-black/50 px-2 py-1 rounded">
-                        Earrings</p>
-                </a>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="relative w-1/5">
-                <a href="#">
-                    <img src="image/BoldSmallHoopsSilver-nav.jpg" alt="Hoops Earrings"
-                        class="w-full h-56 object-cover rounded-lg">
-                    <p class="absolute bottom-2 left-2 text-white font-semibold text-sm bg-black/50 px-2 py-1 rounded">
-                        Hoops Earrings</p>
-                </a>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="relative w-1/5">
-                <a href="#">
-                    <img src="image/Earrings_CategoryCards_03.webp" alt="Stud Earrings"
-                        class="w-full h-56 object-cover rounded-lg">
-                    <p class="absolute bottom-2 left-2 text-white font-semibold text-sm bg-black/50 px-2 py-1 rounded">
-                        Stud Earrings</p>
-                </a>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="relative w-1/5">
-                <a href="#">
-                    <img src="image/Earrings_CategoryCards_04.webp" alt="Drop Earrings"
-                        class="w-full h-56 object-cover rounded-lg">
-                    <p class="absolute bottom-2 left-2 text-white font-semibold text-sm bg-black/50 px-2 py-1 rounded">
-                        Drop Earrings</p>
-                </a>
-            </div>
+    <!-- PRODUCT GRID -->
+    <div class="max-w-7xl mx-auto px-4 pb-20">
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+            <p class="text-gray-500 col-span-4 text-center">Loading products...</p>
         </div>
-    </section>
+    </div>
 
-    <!--store-->
-    <section class="mb-25">
-        <section class="border-t-1  border-gray-300 ">
-            <h4 class=" text-4xl m-8  font-serif"></h4>
-            <section>
-                <div class="text-center mt-6">
-                    <!-- Product 1 -->
-                    <div class="inline-block border border-gray-300 rounded-lg p-4 text-left m-4 align-top">
-                        <div class="relative w-60 h-72 overflow-hidden rounded-b-none">
-                            <!-- Default image -->
-                            <a href="#">
-                                <img src="/Earings/SingleMiniHoop.webp" loading="lazy" alt="Earrings"
-                                    class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-0">
-                            </a>
-                            <!-- Hover image -->
-                            <a href="#">
-                                <img src="/Earings/MiniHoop1.webp" loading="lazy" alt="Earrings Hover"
-                                    class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hover:opacity-100">
-                            </a>
-                        </div>
-                        <h5><a href="#" class="text-gray-400">Mini Hoop</a></h5>
-                        <p>$68</p>
-                        <p>14K Yellow Gold</p>
-                    </div>
-
-                    <!-- Product 2 -->
-                    <div class="inline-block border border-gray-300 rounded-lg p-4 text-left m-4 align-top">
-                        <div class="relative w-60 h-72 overflow-hidden rounded-b-none">
-                            <a href="#">
-                                <img src="/Earings/SingleMiniHoopwhite.webp" loading="lazy" alt="Earrings"
-                                    class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-0">
-                            </a>
-                            <a href="#">
-                                <img src="/Earings/SingleMiniHoop2.webp" loading="lazy" alt="Earrings Hover"
-                                    class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hover:opacity-100">
-                            </a>
-                        </div>
-                        <h5><a href="#" class="text-gray-400">Mini Hoop</a></h5>
-                        <p>$68</p>
-                        <p>14k Yellow Gold</p>
-                    </div>
-
-                    <!-- Product 3 -->
-                    <div class="inline-block border border-gray-300 rounded-lg p-4 text-left m-4 align-top">
-                        <div class="relative w-60 h-72 overflow-hidden rounded-b-none">
-                            <a href="#">
-                                <img src="/Earings/BabyDiamondStud.webp" loading="lazy" alt="Earrings"
-                                    class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-0">
-                            </a>
-                            <a href="#">
-                                <img src="/Earings/DiamondStud1.webp" loading="lazy" alt="Earrings Hover"
-                                    class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hover:opacity-100">
-                            </a>
-                        </div>
-                        <h5><a href="#" class="text-gray-400">Baby Diamond Stud</a></h5>
-                        <p>$98</p>
-                        <p>14K Yellow Gold, Natural Diamond</p>
-                    </div>
-
-                    <!-- Product 4 -->
-                    <div class="inline-block border border-gray-300 rounded-lg p-4 text-left m-4 align-top">
-                        <div class="relative w-60 h-72 overflow-hidden rounded-b-none">
-                            <a href="#">
-                                <img src="/Earings/TinyDiamondStudSingle.webp" loading="lazy" alt="Earrings"
-                                    class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-0">
-                            </a>
-                            <a href="#">
-                                <img src="/Earings/Tiny_Diamond_Stud1.webp" loading="lazy" alt="Earrings Hover"
-                                    class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hover:opacity-100">
-                            </a>
-                        </div>
-                        <h5><a href="#" class="text-gray-400">Tiny Diamond Stud</a></h5>
-                        <p>$98</p>
-                        <p>14K Yellow Gold, Natural Diamond</p>
-                    </div>
-                </div>
-
-
-
-
-                <!--2nd row-->
-                <!--2-->
-                <div class="text-center mt-6">
-                    <!-- Product 1 -->
-                    <div class="inline-block border border-gray-300 rounded-lg p-4 text-left m-4 align-top">
-                        <div class="relative w-60 h-72 overflow-hidden rounded-b-none">
-                            <!-- Default image -->
-                            <a href="#">
-                                <img src="/Earings/PaveDiamondCartilage.webp" loading="lazy" alt="Earrings"
-                                    class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-0">
-                            </a>
-                            <!-- Hover image -->
-                            <a href="#">
-                                <img src="/Earings/PavéDiamond.webp" loading="lazy" alt="Earrings Hover"
-                                    class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hover:opacity-100">
-                            </a>
-                        </div>
-                        <h5><a href="#" class="text-gray-400">Pavé Diamond Mini Hoop</a></h5>
-                        <p>$168</p>
-                        <p>14K Yellow Gold</p>
-                    </div>
-
-                    <!-- Product 2 -->
-                    <div class="inline-block border border-gray-300 rounded-lg p-4 text-left m-4 align-top">
-                        <div class="relative w-60 h-72 overflow-hidden rounded-b-none">
-                            <a href="#">
-                                <img src="/Earings/Marquise.webp" loading="lazy" alt="Earrings"
-                                    class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-0">
-                            </a>
-                            <a href="#">
-                                <img src="/Earings/Marquise1.webp" loading="lazy" alt="Earrings Hover"
-                                    class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hover:opacity-100">
-                            </a>
-                        </div>
-                        <h5><a href="#" class="text-gray-400">Marquise Diamond Bar Stud</a></h5>
-                        <p>$148</p>
-                        <p>14k Yellow Gold, Natural Diamond</p>
-                    </div>
-
-                    <!-- Product 3 -->
-                    <div class="inline-block border border-gray-300 rounded-lg p-4 text-left m-4 align-top">
-                        <div class="relative w-60 h-72 overflow-hidden rounded-b-none">
-                            <a href="#">
-                                <img src="/Earings/SoloDiamondCartilage.webp" loading="lazy" alt="Earrings"
-                                    class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-0">
-                            </a>
-                            <a href="#">
-                                <img src="/Earings/SoloDiamondCartilageimg.webp" loading="lazy" alt="Earrings Hover"
-                                    class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hover:opacity-100">
-                            </a>
-                        </div>
-                        <h5><a href="#" class="text-gray-400">Cartilage Solo Diamond Mini Hoop</a></h5>
-                        <p>$198</p>
-                        <p>14K Yellow Gold, Natural Diamond</p>
-                    </div>
-
-                    <!-- Product 4 -->
-                    <div class="inline-block border border-gray-300 rounded-lg p-4 text-left m-4 align-top">
-                        <div class="relative w-60 h-72 overflow-hidden rounded-b-none">
-                            <a href="#">
-                                <img src="/Earings/MixMetalEarCuff.webp" loading="lazy" alt="Earrings"
-                                    class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-0">
-                            </a>
-                            <a href="#">
-                                <img src="/Earings/MixMetalEarCuffp.webp" loading="lazy" alt="Earrings Hover"
-                                    class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hover:opacity-100">
-                            </a>
-                        </div>
-                        <h5><a href="#" class="text-gray-400">Duet Mixed Ear Cuff</a></h5>
-                        <p>$48</p>
-                        <p>18k Gold Vermeil, Sterling Silver
-                        </p>
-                    </div>
-                </div>
-                <div class="text-center mt-6">
-
-
-
-                    <!--3rd row-->
-                    <!-- Product 1 -->
-                    <div class="inline-block border border-gray-300 rounded-lg p-4 text-left m-4 align-top">
-                        <div class="relative w-60 h-72 overflow-hidden rounded-b-none">
-                            <!-- Default image -->
-                            <a href="#">
-                                <img src="/Earings/SingleColoredMiniHoop.webp" loading="lazy" alt="Earrings"
-                                    class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-0">
-                            </a>
-                            <!-- Hover image -->
-                            <a href="#">
-                                <img src="/Earings/SingleColoredMiniHoopWhitep.webp" loading="lazy" alt="Earrings Hover"
-                                    class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hover:opacity-100">
-                            </a>
-                        </div>
-                        <h5><a href="#" class="text-gray-400">Single Colored Mini Hoop</a></h5>
-                        <p>$88</p>
-                        <p>Lab Grown White Sapphire...</p>
-                    </div>
-
-                    <!-- Product 2 -->
-                    <div class="inline-block border border-gray-300 rounded-lg p-4 text-left m-4 align-top">
-                        <div class="relative w-60 h-72 overflow-hidden rounded-b-none">
-                            <a href="#">
-                                <img src="/Earings/DiamondLotus.webp" loading="lazy" alt="Earrings"
-                                    class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-0">
-                            </a>
-                            <a href="#">
-                                <img src="/Earings/DiamondLotusFlatBackStud.webp" loading="lazy" alt="Earrings Hover"
-                                    class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hover:opacity-100">
-                            </a>
-                        </div>
-                        <h5><a href="#" class="text-gray-400">Diamond Lotus Stud</a></h5>
-                        <p>$198</p>
-                        <p>14k Yellow Gold, Natural Diamond</p>
-                    </div>
-
-                    <!-- Product 3 -->
-                    <div class="inline-block border border-gray-300 rounded-lg p-4 text-left m-4 align-top">
-                        <div class="relative w-60 h-72 overflow-hidden rounded-b-none">
-                            <a href="#">
-                                <img src="/Earings/DUET_CUFF_V_HERO.webp" loading="lazy" alt="Earrings"
-                                    class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-0">
-                            </a>
-                            <a href="#">
-                                <img src="/Earings/Duet_Cuff_earring2.webp" loading="lazy" alt="Earrings Hover"
-                                    class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hover:opacity-100">
-                            </a>
-                        </div>
-                        <h5><a href="#" class="text-gray-400">Duet Ear Cuff</a></h5>
-                        <p>$48</p>
-                        <p>18k Gold Vermeil</p>
-                    </div>
-
-                    <!-- Product 4 -->
-                    <div class="inline-block border border-gray-300 rounded-lg p-4 text-left m-4 align-top">
-                        <div class="relative w-60 h-72 overflow-hidden rounded-b-none">
-                            <a href="#">
-                                <img src="/Earings/ChainStud-.webp" loading="lazy" alt="Earrings"
-                                    class="w-full h-full object-cover transition-opacity duration-500 hover:opacity-0">
-                            </a>
-                            <a href="#">
-                                <img src="/Earings/ChainStud1.webp" loading="lazy" alt="Earrings Hover"
-                                    class="absolute top-0 left-0 w-full h-full object-cover opacity-0 transition-opacity duration-500 hover:opacity-100">
-                            </a>
-                        </div>
-                        <h5><a href="#" class="text-gray-400">Lab Grown Diamond Round...</a></h5>
-                        <p>$198</p>
-                        <p>14k Yellow Gold, Lab Grown Di...</p>
-                    </div>
-                </div>
-
-            </section>
-
-        </section>
-    </section>
-    </section>
-
-
-
-
-
-
-
-    <footer>
-        <div class="footunderline">
-            <div class="footer">
-
-                <div class="footer-intro">
-                    <h3>Bijou Luxe</h3>
-                    <p>Timeless Beauty, Crafted Just for You.</p>
-                    <div class="Contact-icons">
-                        <a href="#"><ion-icon name="logo-linkedin" class="linkedin"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-twitter" class="x"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-facebook" class="facebook"></ion-icon></a>
-                        <a href="#"><ion-icon name="logo-instagram" class="ig"></ion-icon></a>
-
-                    </div>
-                </div>
-
-
-                <div class="footer-shops">
-                    <h4>Shops</h4>
-                    <div class="the-shops">
-                        <a href="#">Shop Watchs</a>
-                        <a href="#">Shop Ear Wears</a>
-                        <a href="#">Shop Bracelets</a>
-                        <a href="#">Shop Jewelrys</a>
-
-                    </div>
-                </div>
-
-
-                <div class="footer-shops">
-                    <h4>Customers service</h4>
-                    <div class="the-shops">
-                        <a href="#">FAQs</a>
-                        <a href="#">Shipping & Returns </a>
-                        <a href="#">Store Locator</a>
-                        <a href="#">Contact Us</a>
-                        <a href="#">Piecing service</a>
-                        <a href="#">Styling Appointment</a>
-
-                    </div>
-                </div>
-
-
-
-                <div class="footer-shops">
-                    <h4>Join the Luxe</h4>
-                    <div class="the-shops">
-                        <a href="#">Our Story</a>
-                        <a href="#">Our Blogs</a>
-                        <a href="#">Ambassadors</a>
-                        <a href="#">Code Of Conduct</a>
-
-                    </div>
-                </div>
-
-
-            </div>
-
-            <div class="trade-mark">
-                <p>© 2025 Bijou Luxe</p>
-
-
-            </div>
-    </footer>
-
-
-    <script src="home.js"></script>
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
     <script>
-        gsap.registerPlugin(ScrollTrigger);
+        async function loadProducts() {
+            try {
+                const response = await fetch('/api/products?category=Earrings');
+                const products = await response.json();
+                const grid = document.getElementById('product-grid');
+                grid.innerHTML = '';
 
-        gsap.utils.toArray("section").forEach((sec) => {
-            gsap.from(sec, {
-                opacity: 0,
-                y: 80,
-                duration: 1.2,
-                ease: "power3.out",
-                scrollTrigger: {
-                    trigger: sec,
-                    start: "top 85%",
-                    toggleActions: "play none none reverse"
+                if (products.length === 0) {
+                    grid.innerHTML = '<p class="text-gray-500 col-span-4 text-center">No products found in this category.</p>';
+                    return;
                 }
-            });
-        });
 
+                products.forEach(product => {
+                    const card = document.createElement('div');
+                    card.className = 'bg-white rounded-lg shadow-md overflow-hidden hover:shadow-xl transition duration-300 cursor-pointer';
+                    card.onclick = () => window.location.href = `product.html?id=${product.id}`;
+                    card.innerHTML = `
+                        <div class="h-64 overflow-hidden">
+                            <img src="${product.image}" alt="${product.name}" class="w-full h-full object-cover hover:scale-110 transition duration-500">
+                        </div>
+                        <div class="p-4 text-center">
+                            <h3 class="text-lg font-bold text-gray-800">${product.name}</h3>
+                            <p class="text-amber-600 font-semibold mt-1">$${product.price.toFixed(2)}</p>
+                        </div>
+                    `;
+                    grid.appendChild(card);
+                });
+            } catch (error) {
+                console.error('Error:', error);
+            }
+        }
+        loadProducts();
     </script>
-    -->
-
 </body>
 
 </html>

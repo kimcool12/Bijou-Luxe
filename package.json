@@ -4,11 +4,13 @@
     "dev": "node server.js"
   },
   "dependencies": {
-    "@tailwindcss/cli": "^4.1.14",
+    "@tailwindcss/cli": "^4.1.18",
     "body-parser": "^2.2.1",
     "cors": "^2.8.5",
     "express": "^5.2.1",
-    "multer": "^2.0.2",
-    "tailwindcss": "^4.1.14"
+    "multer": "^2.0.2"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.18"
   }
 }
